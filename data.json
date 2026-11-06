@@ -1,15 +1,137 @@
 {
   "7": {
+    "speed": {
+      "title": "Скорость",
+      "theory": "Скорость — это путь, пройденный телом за единицу времени. Формула: v = s / t.",
+      "formulaBuilder": {
+        "question": "Соберите формулу скорости:",
+        "correctAnswer": "v=s/t",
+        "correctBlocks": ["v", "s", "t"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["F", "m", "V", "g", "P", "A", "N", "Q","ρ"]
+      }
+    },
     "density": {
       "title": "Плотность",
-      "theory": "Плотность — это масса единицы объема...",
-        "formulaBuilder": {
+      "theory": "Плотность — это масса единицы объема. Формула: ρ = m / V.",
+      "formulaBuilder": {
         "question": "Соберите формулу плотности:",
         "correctAnswer": "ρ=m/V",
         "correctBlocks": ["ρ", "m", "V"],
         "mathSigns": ["=", "/", "×", "+", "-"],
         "extraLetters": ["F", "t", "s", "g", "P", "A", "N", "Q", "v"]
       }
+    },
+    "gravity": {
+      "title": "Сила тяжести",
+      "theory": "Сила тяжести — сила, с которой Земля притягивает тело. Формула: F = m × g.",
+      "formulaBuilder": {
+        "question": "Соберите формулу силы тяжести:",
+        "correctAnswer": "F=m×g",
+        "correctBlocks": ["F", "m", "g"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "P", "A", "N", "Q", "ρ"]
+      }
+    },
+    "archimedes": {
+      "title": "Сила Архимеда",
+      "theory": "Сила Архимеда — выталкивающая сила. Формула: F = ρ × g × V.",
+      "formulaBuilder": {
+        "question": "Соберите формулу силы Архимеда:",
+        "correctAnswer": "F=ρ×g×V",
+        "correctBlocks": ["F", "ρ", "g", "V"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "P", "A", "N", "Q"]
+      }
+    },
+    "friction": {
+      "title": "Сила трения",
+      "theory": "Сила трения обозначается Fтр. В базовой формуле: F = μ × N (где μ - коэффициент трения, N - сила нормальной реакции).",
+      "formulaBuilder": {
+        "question": "Соберите формулу силы трения:",
+        "correctAnswer": "F=μ×N",
+        "correctBlocks": ["F", "μ", "N"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "N"]
+      }
+    },
+    "elasticity": {
+      "title": "Сила упругости",
+      "theory": "Закон Гука: Сила упругости равна произведению жесткости на удлинение. Формула: F = k × Δl.",
+      "formulaBuilder": {
+        "question": "Соберите формулу силы упругости (Закон Гука):",
+        "correctAnswer": "F=k×Δl",
+        "correctBlocks": ["F", "k", "Δl"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "μ"]
+      }
+    },
+    "kinetic": {
+      "title": "Кинетическая энергия",
+      "theory": "Кинетическая энергия — энергия движения. Формула: E = (m × v²) / 2.",
+      "formulaBuilder": {
+        "question": "Соберите формулу кинетической энергии:",
+        "correctAnswer": "E=(m×v²)/2",
+        "correctBlocks": ["E", "m", "v²", "2"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["F", "s", "t", "V", "g", "P", "A", "N"]
+      }
+    },
+    "potential": {
+      "title": "Потенциальная энергия",
+      "theory": "Потенциальная энергия тела, поднятого над землей. Формула: E = m × g × h.",
+      "formulaBuilder": {
+        "question": "Соберите формулу потенциальной энергии:",
+        "correctAnswer": "E=m×g×h",
+        "correctBlocks": ["E", "m", "g", "h"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["F", "s", "t", "V", "P", "A", "N", "v"]
+      }
+    },
+    "work": {
+      "title": "Работа",
+      "theory": "Механическая работа равна произведению силы на путь. Формула: A = F × s.",
+      "formulaBuilder": {
+        "question": "Соберите формулу механической работы:",
+        "correctAnswer": "A=F×s",
+        "correctBlocks": ["A", "F", "s"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "t", "m", "V", "g", "P", "N", "Q", "ρ"]
+      }
+    },
+    "power": {
+      "title": "Мощность",
+      "theory": "Мощность — это работа, совершенная за единицу времени. Формула: N = A / t.",
+      "formulaBuilder": {
+        "question": "Соберите формулу мощности:",
+        "correctAnswer": "N=A/t",
+        "correctBlocks": ["N", "A", "t"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "m", "V", "g", "F", "P", "Q", "ρ"]
+      }
+    },
+    "efficiency": {
+      "title": "КПД",
+      "theory": "Коэффициент полезного действия. Формула: η = (Aп / Aз) × 100%.",
+      "formulaBuilder": {
+        "question": "Соберите формулу КПД:",
+        "correctAnswer": "η=(Aп/Aз)×100%",
+        "correctBlocks": ["η", "Aп", "Aз", "100%"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "F", "N"]
+      }
+    },
+    "weight": {
+      "title": "Вес тела",
+      "theory": "Вес тела — сила, с которой тело действует на опору. Формула: P = m × g.",
+      "formulaBuilder": {
+        "question": "Соберите формулу веса тела:",
+        "correctAnswer": "P=m×g",
+        "correctBlocks": ["P", "m", "g"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "F", "A", "N", "Q", "ρ"]
+      }
     }
-  }
+  },
+  "8": {}
 }

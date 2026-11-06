@@ -96,15 +96,9 @@ function selectSkill(skill) {
     let themeData = database[currentGrade][currentThemeKey];
     document.getElementById('workspace-title').innerText = themeData.title;
     
-    // Показываем разную теорию в зависимости от навыка
-    if (skill === 'formula') {
-        document.getElementById('theory-text').innerText = "Формула плотности: ρ = m / V. Давайте соберем её!";
-    } else if (skill === 'unit') {
-        document.getElementById('theory-text').innerText = "Единицы измерения плотности: кг/м³.";
-    }
-    // (Остальные навыки добавим позже)
+    // Берем текст теории из JSON для любого навыка
+    document.getElementById('theory-text').innerText = themeData.theory;
 }
-
 // 6. Кнопка "Приступить к практике"
 function startPractice() {
     document.getElementById('theory-block').style.display = 'none';
