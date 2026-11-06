@@ -1,0 +1,34 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Светло-голубой фон */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Стили для всех кнопок */
+button {
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Чуть темнее при наведении */
+}
+
+/* Стили для контейнера с теорией и практикой */
+#screen-workspace {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}

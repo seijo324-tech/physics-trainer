@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажер по физике</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ЭКРАН 1: Выбор класса -->
+    <div id="screen-class" class="screen">
+        <h1>Тренажер по физике</h1>
+        <h2>Выберите класс:</h2>
+        <button onclick="selectClass(7)">7 класс</button>
+        <button onclick="selectClass(8)">8 класс</button>
+    </div>
+
+    <!-- ЭКРАН 2: Выбор темы (скрыт по умолчанию) -->
+    <div id="screen-theme" class="screen" style="display: none;">
+        <h2>Выберите тему:</h2>
+        <div id="themes-list">
+            <!-- Кнопки тем будут добавляться через JavaScript -->
+        </div>
+        <br>
+        <button onclick="goBack('screen-class')">← Назад к классам</button>
+    </div>
+
+    <!-- ЭКРАН 3: Выбор навыка (скрыт) -->
+    <div id="screen-skill" class="screen" style="display: none;">
+        <h2 id="current-theme-title"></h2>
+        <h3>Что будем отрабатывать?</h3>
+        <button onclick="selectSkill('formula')">📘 Формулы</button>
+        <button onclick="selectSkill('symbol')">🔤 Обозначения</button>
+        <button onclick="selectSkill('unit')">⚖️ Единицы измерения</button>
+        <button onclick="selectSkill('task')">🧮 Задачи</button>
+        <br><br>
+        <button onclick="goBack('screen-theme')">← Назад к темам</button>
+    </div>
+
+    <!-- ЭКРАН 4: Теория и Практика (скрыт) -->
+    <div id="screen-workspace" class="screen" style="display: none;">
+        <h2 id="workspace-title"></h2>
+        
+        <!-- Блок с теорией -->
+        <div id="theory-block">
+            <p id="theory-text"></p>
+            <button onclick="startPractice()">Приступить к практике</button>
+        </div>
+
+        <!-- Блок с самим заданием (скрыт до нажатия кнопки) -->
+        <div id="practice-block" style="display: none;">
+            <h3>Задание:</h3>
+            <div id="task-container"></div>
+        </div>
+
+        <br>
+        <button onclick="goBack('screen-skill')">← Назад к выбору навыка</button>
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>
+
