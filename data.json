@@ -3,10 +3,12 @@
     "density": {
       "title": "Плотность",
       "theory": "Плотность — это масса единицы объема...",
-      "formulaBuilder": {
+        "formulaBuilder": {
         "question": "Соберите формулу плотности:",
         "correctAnswer": "ρ=m/V",
-        "blocks": ["ρ", "=", "m", "/", "V", "F"]
+        "correctBlocks": ["ρ", "m", "V"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["F", "t", "s", "g", "P", "A", "N", "Q", "v"]
       }
     }
   }
