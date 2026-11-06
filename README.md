@@ -1,93 +1,93 @@
-# physics-trainer
-раз раз 
+# 🧪 Тренажер по физике (Physics Trainer)
+
+Интерактивный веб-тренажер для отработки формул, обозначений и решения задач по физике для школьников с 7 по 11 класс. 
+
+## ⚠️ Статус проекта (Честное слово)
+
+Этот проект находится **в активной разработке** (MVP — минимально жизнеспособный продукт). 
+* **Теория:** На данный момент теория (определения, расшифровка единиц измерения) добавлена не для всех тем. Я активно работаю над их наполнением.
+* **База задач:** Генератор задач настроен, но база данных со временем будет расширяться.
+* **Создание:** Этот проект был создан с нуля в рамках обучения веб-разработке. Значительная часть кода (структура HTML, логика на JavaScript, база данных JSON и дизайн) была сгенерирована с помощью искусственного интеллекта (нейросетей) по четко заданному техническому заданию.
+
+## 🚀 Что уже умеет тренажер?
+
+* **Выбор класса:** Поддержка 7, 8, 9, 10 и 11 классов.
+* **Выбор темы:** Удобная сетка с темами (от «Скорости» до «Фотоэффекта»).
+* **Смешанный режим:** Возможность выбрать сразу несколько тем и навыков для комплексной тренировки.
+* **4 типа практики:**
+  1. 📘 **Формулы:** Интерактивный конструктор — нужно собрать правильную формулу из кубиков (3 попытки подряд с перемешиванием).
+  2. 📊 **Обозначения (Таблица):** Заполнение интерактивной таблицы, где каждый раз случайно скрываются разные ячейки.
+  3. 🧮 **Задачи:** Автоматическая генерация задач с случайными числами. Есть 3 уровня сложности (Легкая, Средняя, Сложная). Всего по 6 задач на тему.
+* **Умная проверка:** Подсветка правильных/неправильных ответов, показ правильного ответа при ошибке.
+
+## 🛠️ Технологии
+
+Проект написан на «чистом» стеке без использования сложных фреймворков:
+* **HTML5** — структура страниц.
+* **CSS3** — дизайн и сетки (Grid).
+* **JavaScript (ES6)** — вся логика тренажера, игровой процесс и генерация случайных чисел.
+* **JSON** — база данных для хранения тем, теории и задач.
+
+## 💻 Как запустить локально (для разработчиков)
+
+Так как проект использует `fetch()` для загрузки JSON-файлов, просто открыть `index.html` двойным кликом не получится (браузер заблокирует чтение файлов из соображений безопасности). Вам понадобится локальный сервер.
+
+**Самый простой способ (через VS Code):**
+1. Скачайте и установите [Visual Studio Code](https://code.visualstudio.com/).
+2. Установите расширение **Live Server**.
+3. Откройте папку с проектом в VS Code.
+4. Нажмите правой кнопкой мыши на `index.html` и выберите **"Open with Live Server"**.
+5. Сайт откроется в браузере по локальному адресу.
+
+**Через Python:**
+Если у вас установлен Python, откройте терминал в папке с проектом и введите:
+```bash
+python -m http.server 8000
 
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## 🤝 Как принять участие в развитии проекта
 
-## Add your files
+Мы буду очень рада любой помощи! Проект открыт для учителей, репетиторов и разработчиков. Вы можете помочь мне сделать тренажер лучше, даже если не умеете программировать.
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+### 👩‍🏫 Для учителей и репетиторов (Помощь с контентом)
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/no6893745/physics-trainer.git
-git branch -M main
-git push -uf origin main
-```
+Вам не нужно знать код, чтобы добавить новые задачи или теорию! Все данные хранятся в двух текстовых файлах в формате `.json`. Вы можете открыть их в любом текстовом редакторе (например, в «Блокноте» или VS Code).
 
-## Integrate with your tools
+#### Как добавить новую теорию или формулу:
+Откройте файл **`data.json`**. Найдите нужный класс (например, `"7": { ... }`) и тему. Чтобы добавить теорию, заполните поля:
+* `"theoryDefinition"` — краткое определение (например, "Скорость — это путь за единицу времени.").
+* `"theoryFormula"` — сама формула (например, "v = s / t").
+* `"theoryUnits"` — расшифровка обозначений (например, "v = [м/с], s = [м], t = [с]").
 
-* [Set up project integrations](https://gitlab.com/no6893745/physics-trainer/-/settings/integrations)
+Чтобы конструктор формул работал, заполните блок `"formulaBuilder"`:
+* `"correctAnswer"` — правильный ответ без пробелов (например, `"v=s/t"`).
+* `"correctBlocks"` — кубики с правильными буквами.
+* `"extraLetters"` — буквы-обманки (чтобы получилось ровно 12 кубиков для сетки).
 
-## Collaborate with your team
+#### Как добавить новые задачи:
+Откройте файл **`extra_data.json`**. Найдите тему и блок `"tasks"`. 
+Каждая задача состоит из:
+* `"question"` — текст задачи. Вместо чисел используйте переменные в фигурных скобках (например, `{s}` и `{t}`).
+* `"vars"` — диапазон генерации чисел `[минимум, максимум, шаг]`. Например, `"s": [10, 100, 10]` будет генерировать числа 10, 20, 30... до 100.
+* `"formula"` — математическая формула для вычисления правильного ответа (например, `"s / t"`).
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+*Совет:* Просто скопируйте любую существующую задачу, вставьте ее ниже и поменяйте текст и переменные.
 
-## Test and Deploy
+---
 
-Use the built-in continuous integration in GitLab.
+### 👨‍💻 Для разработчиков (Помощь с кодом)
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+Если вы хотите улучшить интерфейс, оптимизировать код или добавить новые фичи (например, сохранение прогресса или звуковые эффекты), мы будем рады вашим Pull Request'ам!
 
-***
+#### Стек проекта:
+* Ванильный HTML5 и CSS3 (без сложных фреймворков).
+* Ванильный JavaScript (ES6+).
+* Данные хранятся в JSON-файлах, чтение происходит через `fetch()`.
 
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+#### Как внести изменения:
+1. Сделайте **Fork** (форк) этого репозитория (кнопка в правом верхнем углу на GitHub).
+2. Склонируйте свой форк на компьютер:
+   ```bash
+   git clone https://github.com/ваш_логин/physics-trainer.git

@@ -63,7 +63,6 @@ function selectClass(grade) {
 
     const themesList = document.getElementById('themes-list');
     
-    // 8 класс - 4 колонки, остальные - 3
     let gridStyle = (grade === 8) ? "grid-template-columns: repeat(4, 1fr);" : "";
     
     let html = `<h3 style="text-align: center; margin-bottom: 20px;">Выберите темы для тренировки:</h3>
@@ -213,17 +212,21 @@ function nextSkill() {
     loadNextSkill();
 }
 
+// 9. ИСПРАВЛЕННАЯ функция возврата к теории
 function stopPractice() {
+    // Прячем задание и показываем теорию
     document.getElementById('practice-block').style.display = 'none';
     document.getElementById('theory-block').style.display = 'block';
     document.getElementById('practice-container').style.display = 'block';
+    
+    // Сбрасываем счетчики, чтобы можно было начать заново
     currentQuizIndex = 0;
     currentFormula = "";
-    selectedThemesQueue = [];
-    currentThemeQueueIndex = 0;
-    selectedSkillsQueue = [];
-    currentSkillQueueIndex = 0;
-    goBack('screen-class');
+    formulaStreak = 0;
+    tableStreak = 0;
+    
+    // Очищаем контейнер заданий (чтобы старые кнопки не висели)
+    document.getElementById('task-container').innerHTML = "";
 }
 
 function goBack(screenId) {
@@ -461,7 +464,7 @@ function checkTable() {
 }
 
 // ==========================================
-// ЗАДАЧИ
+// ЗАДАЧИ (ИСПРАВЛЕНА ОШИБКА С КОЛИЧЕСТВОМ)
 // ==========================================
 function renderTextQuiz(type) {
     currentQuizIndex = 0;
@@ -472,8 +475,9 @@ function renderTextQuiz(type) {
 function showQuizQuestion() {
     let tasks = database[currentGrade][currentThemeKey][currentQuizType];
     
+    // Если задачи закончились - переходим к следующему навыку
     if (!tasks || currentQuizIndex >= tasks.length) {
-        document.getElementById('task-container').innerHTML = `<h3 style="color: green;">Задачи решены! Переходим... 🏆</h3>`;
+        document.getElementById('task-container').innerHTML = `<h3 style="color: green;">Все задачи решены! Переходим... 🏆</h3>`;
         setTimeout(() => { nextSkill(); }, 1500);
         return;
     }
