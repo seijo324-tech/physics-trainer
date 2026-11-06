@@ -8,57 +8,47 @@
 </head>
 <body>
 
+    <!-- Кнопка Назад (создается через JS, стилизуется в CSS) -->
+    
     <!-- ЭКРАН 1: Выбор класса -->
     <div id="screen-class" class="screen">
         <h1>Тренажер по физике</h1>
         <h2>Выберите класс:</h2>
         <button onclick="selectClass(7)">7 класс</button>
         <button onclick="selectClass(8)">8 класс</button>
+        <button onclick="selectClass(9)">9 класс</button>
+        <button onclick="selectClass(10)">10 класс</button>
+        <button onclick="selectClass(11)">11 класс</button>
     </div>
 
-    <!-- ЭКРАН 2: Выбор темы (скрыт по умолчанию) -->
+    <!-- ЭКРАН 2: Выбор темы -->
     <div id="screen-theme" class="screen" style="display: none;">
         <h2>Выберите тему:</h2>
-        <div id="themes-list">
-            <!-- Кнопки тем будут добавляться через JavaScript -->
-        </div>
-        <br>
-        <button onclick="goBack('screen-class')">← Назад к классам</button>
+        <div id="themes-list"></div>
     </div>
 
-    <!-- ЭКРАН 3: Выбор навыка (скрыт) -->
-    <div id="screen-skill" class="screen" style="display: none;">
-        <h2 id="current-theme-title"></h2>
-        <h3>Что будем отрабатывать?</h3>
-        <button onclick="selectSkill('formula')">📘 Формулы</button>
-        <button onclick="selectSkill('symbol')">🔤 Обозначения</button>
-        <button onclick="selectSkill('unit')">⚖️ Единицы измерения</button>
-        <button onclick="selectSkill('task')">🧮 Задачи</button>
-        <br><br>
-        <button onclick="goBack('screen-theme')">← Назад к темам</button>
-    </div>
-
-    <!-- ЭКРАН 4: Теория и Практика (скрыт) -->
+    <!-- ЭКРАН 3: Теория и Практика -->
     <div id="screen-workspace" class="screen" style="display: none;">
         <h2 id="workspace-title"></h2>
         
         <!-- Блок с теорией -->
-        <div id="theory-block">
-            <p id="theory-text"></p>
-            <button onclick="startPractice()">Приступить к практике</button>
+        <div id="theory-block" style="text-align: left; background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <p id="theory-def" style="font-size: 18px; margin-bottom: 10px;"></p>
+            <p id="theory-formula" style="font-size: 18px; font-weight: bold; color: #2196F3; margin-bottom: 10px;"></p>
+            <p id="theory-units" style="font-size: 18px; color: #4CAF50; line-height: 1.6;"></p>
         </div>
 
-        <!-- Блок с самим заданием (скрыт до нажатия кнопки) -->
-                <!-- Блок с самим заданием (скрыт до нажатия кнопки) -->
-        <div id="practice-block" style="display: none;">
-            <h3>Задание:</h3>
-            <div id="task-container">
-                <!-- Сюда JS будет вставлять вопрос и кубики -->
-            </div>
+        <!-- Контейнер для кнопок/чекбоксов практики -->
+        <div id="practice-container"></div>
+
+        <!-- Блок с самим заданием -->
+        <div id="practice-block" style="display: none; margin-top: 20px;">
+            <button onclick="stopPractice()" style="background-color: #607d8b; margin-bottom: 15px;">← Вернуться к теории</button>
+            <div id="task-container"></div>
         </div>
+    </div>
 
     <!-- Подключение скрипта -->
     <script src="script.js"></script>
 </body>
 </html>
-
