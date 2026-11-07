@@ -322,9 +322,9 @@
       "formulaBuilder": {
         "question": "Формула R:",
         "correctAnswer": "R=ρ×l/S",
-        "correctBlocks": ["R", "ρ", "l", "S"],
+        "correctBlocks": ["R", "ρ", "l (длина)", "S"],
         "mathSigns": ["=", "×", "/", "+", "-"],
-        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "I", "U"]
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "I (ток)", "U"]
       }
     },
     "powerElectric": {
@@ -374,9 +374,9 @@
       "formulaBuilder": {
         "question": "Сила Ампера:",
         "correctAnswer": "F=B×I×l",
-        "correctBlocks": ["F", "B", "I", "l"],
+        "correctBlocks": ["F", "B", "I", "l (длина)"],
         "mathSigns": ["=", "×", "/", "+", "-"],
-        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "U", "R"]
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "U", "R", "I (ток)", "L"]
       }
     },
     "lorentz": {
@@ -389,7 +389,7 @@
         "correctAnswer": "F=q×v×B",
         "correctBlocks": ["F", "q", "v", "B"],
         "mathSigns": ["=", "×", "/", "+", "-"],
-        "extraLetters": ["s", "t", "m", "V", "g", "P", "U", "R", "I"]
+        "extraLetters": ["s", "t", "m", "V", "g", "P", "U", "R", "I (ток)", "l (длина)"]
       }
     },
     "faraday": {
