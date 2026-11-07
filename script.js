@@ -258,7 +258,7 @@ function renderFormulaBuilder() {
         <div id="formula-answer" style="min-height: 50px; border: 2px solid #4CAF50; padding: 10px; margin: 0 auto 15px auto; font-size: 28px; background: #ffffff; width: 250px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-weight: bold;"></div>
         
                <!-- Верхний ряд со скобками и знаком равно -->
-        <div style="display: flex; justify-content: center; margin-bottom: 5px;">
+        <div class="formula-top-row" style="display: flex; justify-content: center; margin-bottom: 15px;">
             
             <!-- Кнопка равно (широкая) -->
             <button onclick="addToFormula('=')" style="font-size: 24px; width: 140px; height: 60px; background-color: #2196F3; color: white; border: none; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-right: 20px;">=</button>

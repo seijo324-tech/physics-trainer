@@ -111,3 +111,91 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (для экранов до 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    /* 1. Сетка тем: на телефоне делаем 2 колонки */
+    .themes-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+    }
+
+    /* 2. Карточки тем: делаем текст чуть меньше */
+    .theme-card {
+        padding: 8px;
+        font-size: 13px;
+        min-height: 60px;
+    }
+
+    /* 3. Кнопки (общие): делаем на всю ширину и крупнее для пальца */
+    button {
+        font-size: 16px !important;
+        padding: 12px 20px !important;
+        margin: 5px 0 !important;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* 4. Сетка кубиков формул: чуть уменьшаем кубики, чтобы 3 влезло в экран */
+    #letters-grid {
+        gap: 5px !important;
+    }
+    #letters-grid button, #math-signs-column button {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 18px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 5. Верхний ряд с "=" и скобками */
+    .formula-top-row {
+        flex-wrap: wrap; /* Если не влезает — переносим */
+        gap: 5px !important;
+    }
+    /* Делаем равно чуть уже, а скобки чуть меньше на телефоне */
+    .formula-top-row button:nth-child(1) { width: 100px !important; height: 45px !important; margin-right: 5px !important; }
+    .formula-top-row button:nth-child(2) { width: 45px !important; height: 45px !important; margin-right: 10px !important; }
+    .formula-top-row button:nth-child(3) { width: 45px !important; height: 45px !important; }
+
+    /* 6. Таблица (Обозначения) */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    table th, table td {
+        padding: 8px !important;
+        font-size: 14px;
+    }
+    /* Выпадающие списки в таблице */
+    select {
+        font-size: 14px !important;
+        padding: 6px !important;
+    }
+
+    /* 7. Поле ввода ответа в задачах */
+    #quiz-input {
+        width: 100% !important;
+        max-width: 250px;
+        font-size: 18px !important;
+        padding: 10px !important;
+    }
+    
+    /* 8. Теория на телефоне */
+    #theory-block {
+        padding: 15px !important;
+    }
+    #theory-def, #theory-formula, #theory-units {
+        font-size: 16px !important;
+    }
+    
+    /* 9. Кнопка "Назад" */
+    #back-btn {
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+        width: auto !important;
+        max-width: 100px;
+    }
+}
