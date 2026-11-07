@@ -131,7 +131,7 @@ function showSkillSelection() {
     let themeData = database[currentGrade][currentThemeKey];
     document.getElementById('workspace-title').innerText = `Тема: ${themeData.title}`;
     
-    document.getElementById('theory-def').innerText = themeData.theoryDefinition || "";
+    document.getElementById('theory-def').innerHTML = themeData.theoryDefinition || "";
     document.getElementById('theory-formula').innerText = themeData.theoryFormula || "";
     document.getElementById('theory-units').innerHTML = themeData.theoryUnits || "";
     

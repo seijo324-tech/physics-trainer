@@ -113,6 +113,174 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================
+   ВЫРЕЗКА КАРТИНОК ДЛЯ ТЕОРИИ (7 класс)
+   ========================================== */
+
+.theory-img {
+    display: block;
+    margin: 15px auto 15px auto;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 400px; /* Ширина вырезанной ячейки */
+    height: 150px; /* Высота вырезанной ячейки */
+    background-size: 300% 600%; /* Для первой картинки (3 колонки, 6 строк) */
+}
+
+/* --- ТЕМЫ ИЗ ПЕРВОЙ КАРТИНКИ (class7_1.png) --- */
+/* Сетка: 3 колонки, 6 строк. Шаг по X: 50%. Шаг по Y: 20%. */
+
+/* 1. Скорость (1 строка, 1 колонка) */
+.img-speed { 
+    background-image: url('class7_1.png'); 
+    background-position: 0% 0%; 
+}
+
+/* 2. Плотность (1 строка, 2 колонка) */
+.img-density { 
+    background-image: url('class7_1.png'); 
+    background-position: 50% 0%; 
+}
+
+/* 3. Сила тяжести (1 строка, 3 колонка) */
+.img-gravity { 
+    background-image: url('class7_1.png'); 
+    background-position: 100% 0%; 
+}
+
+/* 4. Вес тела (2 строка, 1 колонка) */
+.img-weight { 
+    background-image: url('class7_1.png'); 
+    background-position: 0% 20%; 
+}
+
+/* 5. Сила упругости (2 строка, 2 колонка) */
+.img-elasticity { 
+    background-image: url('class7_1.png'); 
+    background-position: 50% 20%; 
+}
+
+/* 6. Сила трения (2 строка, 3 колонка) */
+.img-friction { 
+    background-image: url('class7_1.png'); 
+    background-position: 100% 20%; 
+}
+
+/* 7. Равнодействующая сила (3 строка, 1 колонка) */
+.img-resultant { 
+    background-image: url('class7_1.png'); 
+    background-position: 0% 40%; 
+}
+
+/* 8. Сила Архимеда (3 строка, 2 колонка) */
+.img-archimedes { 
+    background-image: url('class7_1.png'); 
+    background-position: 50% 40%; 
+}
+
+/* 9. Плавание тел (3 строка, 3 колонка) */
+.img-floating { 
+    background-image: url('class7_1.png'); 
+    background-position: 100% 40%; 
+}
+
+/* 10. Давление твердых тел (4 строка, 1 колонка) */
+.img-pressureSolid { 
+    background-image: url('class7_1.png'); 
+    background-position: 0% 60%; 
+}
+
+/* 11. Давление жидкости (4 строка, 2 колонка) */
+.img-pressureLiquid { 
+    background-image: url('class7_1.png'); 
+    background-position: 50% 60%; 
+}
+
+/* 12. Гидравлический пресс (4 строка, 3 колонка) */
+.img-pressurePiston { 
+    background-image: url('class7_1.png'); 
+    background-position: 100% 60%; 
+}
+
+/* 13. Момент силы. Рычаг (5 строка, 1 колонка) */
+.img-lever { 
+    background-image: url('class7_1.png'); 
+    background-position: 0% 80%; 
+}
+
+/* 14. Механическая работа (5 строка, 2 колонка) */
+.img-work { 
+    background-image: url('class7_1.png'); 
+    background-position: 50% 80%; 
+}
+
+/* 15. Мощность (5 строка, 3 колонка) */
+.img-power { 
+    background-image: url('class7_1.png'); 
+    background-position: 100% 80%; 
+}
+
+/* 16. Кинетическая энергия (6 строка, 1 колонка) */
+.img-kinetic { 
+    background-image: url('class7_1.png'); 
+    background-position: 0% 100%; 
+}
+
+/* 17. Потенциальная энергия (6 строка, 2 колонка) */
+.img-potential { 
+    background-image: url('class7_1.png'); 
+    background-position: 50% 100%; 
+}
+
+/* 18. КПД (6 строка, 3 колонка) */
+.img-efficiency { 
+    background-image: url('class7_1.png'); 
+    background-position: 100% 100%; 
+}
+
+
+/* --- ТЕМЫ ИЗ ВТОРОЙ КАРТИНКИ (class7_2.png) --- */
+/* Сетка: 3 колонки, 4 строки. Шаг по X: 50%. Шаг по Y: 33.33%. */
+/* Мы переопределяем background-size для этой картинки */
+
+.img-density2, .img-gravity2, .img-weight2, .img-elasticity2, 
+.img-resultant2, .img-archimedes2, .img-floating2, .img-pressureSolid2, 
+.img-pressureLiquid2, .img-pressurePiston2, .img-lever2, .img-efficiency2 {
+    background-image: url('class7_2.png');
+    background-size: 300% 400%; /* 3 колонки, 4 строки */
+}
+
+/* 1. Плотность (1 строка, 1 колонка) */
+.img-density2 { background-position: 0% 0%; }
+/* 2. Сила тяжести (1 строка, 2 колонка) */
+.img-gravity2 { background-position: 50% 0%; }
+/* 3. Вес тела (1 строка, 3 колонка) */
+.img-weight2 { background-position: 100% 0%; }
+
+/* 4. Сила упругости (2 строка, 1 колонка) */
+.img-elasticity2 { background-position: 0% 33.33%; }
+/* 5. Равнодействующая (2 строка, 2 колонка) */
+.img-resultant2 { background-position: 50% 33.33%; }
+/* 6. Сила Архимеда (2 строка, 3 колонка) */
+.img-archimedes2 { background-position: 100% 33.33%; }
+
+/* 7. Плавание тел (3 строка, 1 колонка) */
+.img-floating2 { background-position: 0% 66.66%; }
+/* 8. Давление твердых тел (3 строка, 2 колонка) */
+.img-pressureSolid2 { background-position: 50% 66.66%; }
+/* 9. Давление жидкости (3 строка, 3 колонка) */
+.img-pressureLiquid2 { background-position: 100% 66.66%; }
+
+/* 10. Гидравлический пресс (4 строка, 1 колонка) */
+.img-pressurePiston2 { background-position: 0% 100%; }
+/* 11. Рычаг (4 строка, 2 колонка) */
+.img-lever2 { background-position: 50% 100%; }
+/* 12. КПД (4 строка, 3 колонка) */
+.img-efficiency2 { background-position: 100% 100%; }
+
+
 /* ==========================================
    МОБИЛЬНАЯ АДАПТАЦИЯ (для экранов до 768px)
    ========================================== */
@@ -200,4 +368,5 @@ button:hover {
         width: auto !important;
         max-width: 100px;
     }
+    
 }
