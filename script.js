@@ -142,6 +142,9 @@ function showSkillSelection() {
         <h3>Что будем отрабатывать?</h3>
         <div style="text-align: left; display: inline-block; margin-bottom: 15px; font-size: 18px;">
             <label style="display: block; margin-bottom: 10px; cursor: pointer;">
+                <input type="checkbox" id="chk_theory" value="theory" style="transform: scale(1.5); margin-right: 10px;"> 📖 Теория (тест)
+            </label>
+            <label style="display: block; margin-bottom: 10px; cursor: pointer;">
                 <input type="checkbox" id="chk_formula" value="formula" style="transform: scale(1.5); margin-right: 10px;"> 📘 Формулы
             </label>
             <label style="display: block; margin-bottom: 10px; cursor: pointer;">
@@ -161,6 +164,7 @@ function showSkillSelection() {
 // 6. Запуск навыков
 function startSkillsPractice() {
     let selectedSkills = [];
+    if (document.getElementById('chk_theory').checked) selectedSkills.push('theory');
     if (document.getElementById('chk_formula').checked) selectedSkills.push('formula');
     if (document.getElementById('chk_table').checked) selectedSkills.push('table');
     if (document.getElementById('chk_task').checked) selectedSkills.push('task');
@@ -191,7 +195,9 @@ function loadNextSkill() {
 
     let skill = selectedSkillsQueue[currentSkillQueueIndex];
     
-    if (skill === 'formula') {
+    if (skill === 'theory') {
+        renderTheoryQuiz(); // Запускаем тест по теории
+    } else if (skill === 'formula') {
         formulaStreak = 0; 
         renderFormulaBuilder();
     } else if (skill === 'table') {
@@ -659,6 +665,136 @@ function checkTextAnswer() {
         resultEl.style.color = "red";
     }
 }
+
+// ==========================================
+// ТЕСТ ПО ТЕОРИИ (ВЕРНО/НЕВЕРНО)
+// ==========================================
+
+function startTheoryQuiz() {
+    let themeData = database[currentGrade][currentThemeKey];
+    
+    // Если утверждений для этой темы еще нет, выводим заглушку
+    if (!themeData.theoryQuiz || themeData.theoryQuiz.length === 0) {
+        document.getElementById('theory-quiz-container').innerHTML = "<p style='color: orange;'>Утверждения для этой темы еще не добавлены.</p>";
+        return;
+    }
+
+    // 1. Перемешиваем утверждения
+    let shuffled = [...themeData.theoryQuiz].sort(() => Math.random() - 0.5);
+    
+    // 2. Берем первые 20 (если их больше) и разбиваем на блоки по 4
+    let selected = shuffled.slice(0, 20);
+    let blocks = [];
+    for (let i = 0; i < selected.length; i += 4) {
+        blocks.push(selected.slice(i, i + 4));
+    }
+
+    // 3. Генерируем HTML
+    let html = `<h3>Отметьте галочками только ВЕРНЫЕ утверждения:</h3>`;
+    
+    blocks.forEach((block, blockIndex) => {
+        html += `<div style="background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; text-align: left;">`;
+        html += `<h4 style="margin-top: 0; color: #2196F3;">Блок ${blockIndex + 1}</h4>`;
+        
+        block.forEach((item, itemIndex) => {
+            // Сохраняем правильный ответ в data-атрибут
+            html += `
+                <label style="display: block; margin-bottom: 10px; cursor: pointer; font-size: 16px;">
+                    <input type="checkbox" class="theory-checkbox" data-correct="${item.isTrue}" style="transform: scale(1.3); margin-right: 10px;">
+                    ${item.text}
+                </label>
+            `;
+        });
+        html += `</div>`;
+    });
+
+    html += `<button onclick="checkTheoryQuiz()">Проверить ответы</button>
+             <p id="theory-quiz-result" style="font-weight: bold; margin-top: 15px;"></p>`;
+
+    document.getElementById('theory-quiz-container').innerHTML = html;
+    
+    // Прячем кнопку запуска, чтобы не нажали дважды
+    event.target.style.display = 'none';
+}
+
+function renderTheoryQuiz() {
+    let themeData = database[currentGrade][currentThemeKey];
+    let container = document.getElementById('task-container'); // Теперь выводим в task-container
+    
+    if (!themeData.theoryQuiz || themeData.theoryQuiz.length === 0) {
+        container.innerHTML = "<p style='color: orange;'>Утверждения для этой темы еще не добавлены.</p>";
+        setTimeout(() => { nextSkill(); }, 2000); // Если нет теста, идем дальше
+        return;
+    }
+
+    // Перемешиваем и делим на блоки
+    let shuffled = [...themeData.theoryQuiz].sort(() => Math.random() - 0.5);
+    let selected = shuffled.slice(0, 20);
+    let blocks = [];
+    for (let i = 0; i < selected.length; i += 4) {
+        blocks.push(selected.slice(i, i + 4));
+    }
+
+    let html = `<h3>Отметьте галочками только ВЕРНЫЕ утверждения:</h3>`;
+    
+    blocks.forEach((block, blockIndex) => {
+        html += `<div style="background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; text-align: left;">`;
+        html += `<h4 style="margin-top: 0; color: #2196F3;">Блок ${blockIndex + 1}</h4>`;
+        
+        block.forEach((item, itemIndex) => {
+            html += `
+                <label style="display: block; margin-bottom: 10px; cursor: pointer; font-size: 16px;">
+                    <input type="checkbox" class="theory-checkbox" data-correct="${item.isTrue}" style="transform: scale(1.3); margin-right: 10px;">
+                    ${item.text}
+                </label>
+            `;
+        });
+        html += `</div>`;
+    });
+
+    html += `<button onclick="checkTheoryQuiz()">Проверить ответы</button>
+             <p id="theory-quiz-result" style="font-weight: bold; margin-top: 15px;"></p>`;
+
+    container.innerHTML = html;
+}
+
+function checkTheoryQuiz() {
+    let checkboxes = document.querySelectorAll('.theory-checkbox');
+    let correctCount = 0;
+    let total = checkboxes.length;
+
+    checkboxes.forEach(cb => {
+        let isChecked = cb.checked;
+        let isCorrect = cb.dataset.correct === 'true';
+
+        if ((isChecked && isCorrect) || (!isChecked && !isCorrect)) {
+            correctCount++;
+            cb.parentElement.style.color = "green";
+        } else {
+            cb.parentElement.style.color = "red";
+        }
+        cb.disabled = true; 
+    });
+
+    let resultEl = document.getElementById('theory-quiz-result');
+    resultEl.innerText = `Вы ответили правильно на ${correctCount} из ${total} утверждений.`;
+    
+    if (correctCount === total) {
+        resultEl.style.color = "green";
+        resultEl.innerText += " 🎉 Отлично! Теория усвоена.";
+    } else {
+        resultEl.style.color = "orange";
+        resultEl.innerText += " Есть ошибки. Вернитесь к теории и перечитайте.";
+    }
+    
+    // Добавляем кнопку "Далее", чтобы перейти к следующему навыку
+    let nextBtn = document.createElement('button');
+    nextBtn.innerText = "Далее →";
+    nextBtn.style.cssText = "margin-top: 20px; background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 16px;";
+    nextBtn.onclick = () => nextSkill();
+    resultEl.parentElement.appendChild(nextBtn);
+}
+
 
 // Создание кнопки Назад и запуск
 let backBtn = document.createElement('button');
