@@ -64,7 +64,19 @@ function selectClass(grade) {
     const themesList = document.getElementById('themes-list');
     
     // 8 класс - 4 колонки, остальные - 3
-    let gridStyle = (grade === 8) ? "grid-template-columns: repeat(4, 1fr);" : "";
+    // Для 8 класса - 4 колонки, для 9 класса - 5 колонок, для остальных - 3
+        let gridStyle = "";
+    if (grade === 7) {
+        // 18 тем: 6 колонок по 3 строки
+        gridStyle = "grid-template-columns: repeat(3, 1fr);"; 
+    } else if (grade === 8) {
+        // 20 тем: 5 колонок по 4 строки (или 4 колонки по 5, как вы решите)
+        gridStyle = "grid-template-columns: repeat(4, 1fr);"; 
+    } else if (grade === 9) {
+        // 25 тем: 5 колонок по 5 строк
+        gridStyle = "grid-template-columns: repeat(5, 1fr);"; 
+    }
+    // Для 10 и 11 классов останется дефолтная сетка (3 колонки)
     
     let html = `<h3 style="text-align: center; margin-bottom: 20px;">Выберите темы для тренировки:</h3>
     <div class="themes-grid" style="${gridStyle}">`;
