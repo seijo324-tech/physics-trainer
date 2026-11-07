@@ -1,54 +1,558 @@
 {
   "7": {
-    "speed": { "title": "1. Скорость", "theoryDefinition": "Скорость — путь за единицу времени.", "theoryFormula": "v = s / t", "theoryUnits": "v = [м/с], s = [м], t = [с]", "formulaBuilder": { "question": "Формула скорости:", "correctAnswer": "v=s/t", "correctBlocks": ["v", "s", "t"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["F", "m", "V", "g", "P", "A", "N", "Q", "ρ"] } },
-    "density": { "title": "2. Плотность", "theoryDefinition": "Масса единицы объема.", "theoryFormula": "ρ = m / V", "theoryUnits": "ρ = [кг/м³], m = [кг], V = [м³]", "formulaBuilder": { "question": "Формула плотности:", "correctAnswer": "ρ=m/V", "correctBlocks": ["ρ", "m", "V"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["F", "t", "s", "g", "P", "A", "N", "Q", "v"] } },
-    "gravity": { "title": "3. Сила тяжести", "theoryDefinition": "Сила притяжения к Земле.", "theoryFormula": "Fтяж = m × g", "theoryUnits": "Fтяж = [Н], m = [кг], g = [м/с²]", "formulaBuilder": { "question": "Формула силы тяжести:", "correctAnswer": "Fтяж=m×g", "correctBlocks": ["Fтяж", "m", "g"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "P", "A", "N", "Q", "ρ"] } },
-    "weight": { "title": "4. Вес тела", "theoryDefinition": "Сила действия на опору.", "theoryFormula": "P = m × g", "theoryUnits": "P = [Н], m = [кг], g = [м/с²]", "formulaBuilder": { "question": "Формула веса:", "correctAnswer": "P=m×g", "correctBlocks": ["P", "m", "g"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "Fтяж", "A", "N", "Q", "ρ"] } },
-    "elasticity": { "title": "5. Сила упругости", "theoryDefinition": "Закон Гука.", "theoryFormula": "Fупр = k × Δl", "theoryUnits": "Fупр = [Н], k = [Н/м], Δl = [м]", "formulaBuilder": { "question": "Закон Гука:", "correctAnswer": "Fупр=k×Δl", "correctBlocks": ["Fупр", "k", "Δl"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "μ"] } },
-    "friction": { "title": "6. Сила трения", "theoryDefinition": "Сила сопротивления движению.", "theoryFormula": "Fтр = μ × N", "theoryUnits": "Fтр = [Н], μ = [безразм.], N = [Н]", "formulaBuilder": { "question": "Формула трения:", "correctAnswer": "Fтр=μ×N", "correctBlocks": ["Fтр", "μ", "N"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "ρ"] } },
-    "archimedes": { "title": "7. Сила Архимеда", "theoryDefinition": "Выталкивающая сила.", "theoryFormula": "Fарх = ρ × g × V", "theoryUnits": "Fарх = [Н], ρ = [кг/м³], g = [м/с²], V = [м³]", "formulaBuilder": { "question": "Формула Архимеда:", "correctAnswer": "Fарх=ρ×g×V", "correctBlocks": ["Fарх", "ρ", "g", "V"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "P", "A", "N", "Q", "h"] } },
-    "pressureSolid": { "title": "8. Давление твердых тел", "theoryDefinition": "Сила на площадь.", "theoryFormula": "p = F / S", "theoryUnits": "p = [Па], F = [Н], S = [м²]", "formulaBuilder": { "question": "Формула давления:", "correctAnswer": "p=F/S", "correctBlocks": ["p", "F", "S"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "ρ"] } },
-    "pressureLiquid": { "title": "9. Давление жидкости", "theoryDefinition": "Давление столба жидкости.", "theoryFormula": "p = ρ × g × h", "theoryUnits": "p = [Па], ρ = [кг/м³], g = [м/с²], h = [м]", "formulaBuilder": { "question": "Формула давления жидкости:", "correctAnswer": "p=ρ×g×h", "correctBlocks": ["p", "ρ", "g", "h"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "A", "N", "S"] } },
-    "pressurePiston": { "title": "10. Гидравлический пресс", "theoryDefinition": "Передача давления.", "theoryFormula": "F1 / S1 = F2 / S2", "theoryUnits": "F = [Н], S = [м²]", "formulaBuilder": { "question": "Формула пресса:", "correctAnswer": "F1/S1=F2/S2", "correctBlocks": ["F1", "S1", "F2", "S2"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "ρ"] } },
-    "work": { "title": "11. Работа", "theoryDefinition": "Сила на путь.", "theoryFormula": "A = F × s", "theoryUnits": "A = [Дж], F = [Н], s = [м]", "formulaBuilder": { "question": "Формула работы:", "correctAnswer": "A=F×s", "correctBlocks": ["A", "F", "s"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "t", "m", "V", "g", "P", "N", "Q", "ρ"] } },
-    "power": { "title": "12. Мощность", "theoryDefinition": "Работа за время.", "theoryFormula": "N = A / t", "theoryUnits": "N = [Вт], A = [Дж], t = [с]", "formulaBuilder": { "question": "Формула мощности:", "correctAnswer": "N=A/t", "correctBlocks": ["N", "A", "t"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "m", "V", "g", "F", "P", "Q", "ρ"] } },
-    "kinetic": { "title": "13. Кинетическая энергия", "theoryDefinition": "Энергия движения.", "theoryFormula": "Eк = (m × v²) / 2", "theoryUnits": "Eк = [Дж], m = [кг], v = [м/с]", "formulaBuilder": { "question": "Формула Eк:", "correctAnswer": "Eк=(m×v²)/2", "correctBlocks": ["Eк", "m", "v²", "2"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["F", "s", "t", "V", "g", "P", "A", "N", "ρ"] } },
-    "potential": { "title": "14. Потенциальная энергия", "theoryDefinition": "Энергия взаимодействия.", "theoryFormula": "Eп = m × g × h", "theoryUnits": "Eп = [Дж], m = [кг], g = [м/с²], h = [м]", "formulaBuilder": { "question": "Формула Eп:", "correctAnswer": "Eп=m×g×h", "correctBlocks": ["Eп", "m", "g", "h"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["F", "s", "t", "V", "P", "A", "N", "v", "ρ"] } },
-    "efficiency": { "title": "15. КПД", "theoryDefinition": "Коэффициент полезного действия.", "theoryFormula": "η = (Aп / Aз) × 100%", "theoryUnits": "η = [%], Aп = [Дж], Aз = [Дж]", "formulaBuilder": { "question": "Формула КПД:", "correctAnswer": "η=(Aп/Aз)×100%", "correctBlocks": ["η", "Aп", "Aз", "100%"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "g", "F", "N", "ρ"] } }
+    "speed": {
+      "title": "1. Скорость",
+      "theoryDefinition": "Скорость — путь за единицу времени.",
+      "theoryFormula": "v = s / t",
+      "theoryUnits": "v — скорость, измеряется в [м/с]<br>s — путь, измеряется в [м]<br>t — время, измеряется в [с]",
+      "formulaBuilder": {
+        "question": "Формула скорости:",
+        "correctAnswer": "v=s/t",
+        "correctBlocks": ["v", "s", "t"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["F", "m", "V", "g", "P", "A", "N", "Q", "ρ"]
+      }
+    },
+    "density": {
+      "title": "2. Плотность",
+      "theoryDefinition": "Масса единицы объема.",
+      "theoryFormula": "ρ = m / V",
+      "theoryUnits": "ρ — плотность, измеряется в [кг/м³]<br>m — масса, измеряется в [кг]<br>V — объем, измеряется в [м³]",
+      "formulaBuilder": {
+        "question": "Формула плотности:",
+        "correctAnswer": "ρ=m/V",
+        "correctBlocks": ["ρ", "m", "V"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["F", "t", "s", "g", "P", "A", "N", "Q", "v"]
+      }
+    },
+    "gravity": {
+      "title": "3. Сила тяжести",
+      "theoryDefinition": "Сила притяжения к Земле.",
+      "theoryFormula": "Fтяж = m × g",
+      "theoryUnits": "Fтяж — сила тяжести, измеряется в [Н]<br>m — масса, измеряется в [кг]<br>g — ускорение свободного падения, измеряется в [м/с²]",
+      "formulaBuilder": {
+        "question": "Формула силы тяжести:",
+        "correctAnswer": "Fтяж=m×g",
+        "correctBlocks": ["Fтяж", "m", "g"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "P", "A", "N", "Q", "ρ"]
+      }
+    },
+    "weight": {
+      "title": "4. Вес тела",
+      "theoryDefinition": "Сила действия на опору.",
+      "theoryFormula": "P = m × g",
+      "theoryUnits": "P — вес тела, измеряется в [Н]<br>m — масса, измеряется в [кг]<br>g — ускорение свободного падения, измеряется в [м/с²]",
+      "formulaBuilder": {
+        "question": "Формула веса:",
+        "correctAnswer": "P=m×g",
+        "correctBlocks": ["P", "m", "g"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "Fтяж", "A", "N", "Q", "ρ"]
+      }
+    },
+    "elasticity": {
+      "title": "5. Сила упругости",
+      "theoryDefinition": "Закон Гука.",
+      "theoryFormula": "Fупр = k × Δl",
+      "theoryUnits": "Fупр — сила упругости, измеряется в [Н]<br>k — жесткость, измеряется в [Н/м]<br>Δl — удлинение, измеряется в [м]",
+      "formulaBuilder": {
+        "question": "Закон Гука:",
+        "correctAnswer": "Fупр=k×Δl",
+        "correctBlocks": ["Fупр", "k", "Δl"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "μ"]
+      }
+    },
+    "friction": {
+      "title": "6. Сила трения",
+      "theoryDefinition": "Сила сопротивления движению.",
+      "theoryFormula": "Fтр = μ × N",
+      "theoryUnits": "Fтр — сила трения, измеряется в [Н]<br>μ — коэффициент трения, безразмерная величина<br>N — сила нормальной реакции, измеряется в [Н]",
+      "formulaBuilder": {
+        "question": "Формула трения:",
+        "correctAnswer": "Fтр=μ×N",
+        "correctBlocks": ["Fтр", "μ", "N"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "ρ"]
+      }
+    },
+    "archimedes": {
+      "title": "7. Сила Архимеда",
+      "theoryDefinition": "Выталкивающая сила.",
+      "theoryFormula": "Fарх = ρ × g × V",
+      "theoryUnits": "Fарх — выталкивающая сила, измеряется в [Н]<br>ρ — плотность жидкости, измеряется в [кг/м³]<br>g — ускорение свободного падения, измеряется в [м/с²]<br>V — объем <u>погруженной</u> части тела, измеряется в [м³]",
+      "formulaBuilder": {
+        "question": "Формула Архимеда:",
+        "correctAnswer": "Fарх=ρ×g×V",
+        "correctBlocks": ["Fарх", "ρ", "g", "V"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "P", "A", "N", "Q", "h"]
+      }
+    },
+    "pressureSolid": {
+      "title": "8. Давление твердых тел",
+      "theoryDefinition": "Сила на площадь.",
+      "theoryFormula": "p = F / S",
+      "theoryUnits": "p — давление, измеряется в [Па]<br>F — сила давления, измеряется в [Н]<br>S — площадь поверхности, измеряется в [м²]",
+      "formulaBuilder": {
+        "question": "Формула давления:",
+        "correctAnswer": "p=F/S",
+        "correctBlocks": ["p", "F", "S"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "ρ"]
+      }
+    },
+    "pressureLiquid": {
+      "title": "9. Давление жидкости",
+      "theoryDefinition": "Давление столба жидкости.",
+      "theoryFormula": "p = ρ × g × h",
+      "theoryUnits": "p — давление, измеряется в [Па]<br>ρ — плотность жидкости, измеряется в [кг/м³]<br>g — ускорение свободного падения, измеряется в [м/с²]<br>h — высота столба жидкости, измеряется в [м]",
+      "formulaBuilder": {
+        "question": "Формула давления жидкости:",
+        "correctAnswer": "p=ρ×g×h",
+        "correctBlocks": ["p", "ρ", "g", "h"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "A", "N", "S"]
+      }
+    },
+    "pressurePiston": {
+      "title": "10. Гидравлический пресс",
+      "theoryDefinition": "Передача давления.",
+      "theoryFormula": "F1 / S1 = F2 / S2",
+      "theoryUnits": "F1, F2 — силы, действующие на поршни, измеряются в [Н]<br>S1, S2 — площади поршней, измеряются в [м²]",
+      "formulaBuilder": {
+        "question": "Формула пресса:",
+        "correctAnswer": "F1/S1=F2/S2",
+        "correctBlocks": ["F1", "S1", "F2", "S2"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "A", "ρ"]
+      }
+    },
+    "work": {
+      "title": "11. Работа",
+      "theoryDefinition": "Сила на путь.",
+      "theoryFormula": "A = F × s",
+      "theoryUnits": "A — работа, измеряется в [Дж]<br>F — сила, измеряется в [Н]<br>s — путь, измеряется в [м]",
+      "formulaBuilder": {
+        "question": "Формула работы:",
+        "correctAnswer": "A=F×s",
+        "correctBlocks": ["A", "F", "s"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "t", "m", "V", "g", "P", "N", "Q", "ρ"]
+      }
+    },
+    "power": {
+      "title": "12. Мощность",
+      "theoryDefinition": "Работа за время.",
+      "theoryFormula": "N = A / t",
+      "theoryUnits": "N — мощность, измеряется в [Вт]<br>A — работа, измеряется в [Дж]<br>t — время, измеряется в [с]",
+      "formulaBuilder": {
+        "question": "Формула мощности:",
+        "correctAnswer": "N=A/t",
+        "correctBlocks": ["N", "A", "t"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "m", "V", "g", "F", "P", "Q", "ρ"]
+      }
+    },
+    "kinetic": {
+      "title": "13. Кинетическая энергия",
+      "theoryDefinition": "Энергия движения.",
+      "theoryFormula": "Eк = (m × v²) / 2",
+      "theoryUnits": "Eк — кинетическая энергия, измеряется в [Дж]<br>m — масса, измеряется в [кг]<br>v — скорость, измеряется в [м/с]",
+      "formulaBuilder": {
+        "question": "Формула Eк:",
+        "correctAnswer": "Eк=(m×v²)/2",
+        "correctBlocks": ["Eк", "m", "v²", "2"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["F", "s", "t", "V", "g", "P", "A", "N", "ρ"]
+      }
+    },
+    "potential": {
+      "title": "14. Потенциальная энергия",
+      "theoryDefinition": "Энергия взаимодействия.",
+      "theoryFormula": "Eп = m × g × h",
+      "theoryUnits": "Eп — потенциальная энергия, измеряется в [Дж]<br>m — масса, измеряется в [кг]<br>g — ускорение свободного падения, измеряется в [м/с²]<br>h — высота, измеряется в [м]",
+      "formulaBuilder": {
+        "question": "Формула Eп:",
+        "correctAnswer": "Eп=m×g×h",
+        "correctBlocks": ["Eп", "m", "g", "h"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["F", "s", "t", "V", "P", "A", "N", "v", "ρ"]
+      }
+    },
+    "efficiency": {
+      "title": "15. КПД",
+      "theoryDefinition": "Коэффициент полезного действия.",
+      "theoryFormula": "η = (Aп / Aз) × 100%",
+      "theoryUnits": "η — КПД, измеряется в [%]<br>Aп — полезная работа, измеряется в [Дж]<br>Aз — затраченная работа, измеряется в [Дж]",
+      "formulaBuilder": {
+        "question": "Формула КПД:",
+        "correctAnswer": "η=(Aп/Aз)×100%",
+        "correctBlocks": ["η", "Aп", "Aз", "100%"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "F", "N", "ρ"]
+      }
+    }
   },
   "8": {
-    "heat": { "title": "1. Количество теплоты", "theoryDefinition": "Нагревание.", "theoryFormula": "Q = c × m × Δt", "theoryUnits": "Q = [Дж], c = [Дж/(кг·°C)], m = [кг], Δt = [°C]", "formulaBuilder": { "question": "Формула Q:", "correctAnswer": "Q=c×m×Δt", "correctBlocks": ["Q", "c", "m", "Δt"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"] } },
-    "combustion": { "title": "2. Горение топлива", "theoryDefinition": "Сгорание.", "theoryFormula": "Q = q × m", "theoryUnits": "Q = [Дж], q = [Дж/кг], m = [кг]", "formulaBuilder": { "question": "Формула сгорания:", "correctAnswer": "Q=q×m", "correctBlocks": ["Q", "q", "m"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"] } },
-    "melting": { "title": "3. Плавление", "theoryDefinition": "Плавление.", "theoryFormula": "Q = λ × m", "theoryUnits": "Q = [Дж], λ = [Дж/кг], m = [кг]", "formulaBuilder": { "question": "Формула плавления:", "correctAnswer": "Q=λ×m", "correctBlocks": ["Q", "λ", "m"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"] } },
-    "boiling": { "title": "4. Кипение", "theoryDefinition": "Парообразование.", "theoryFormula": "Q = L × m", "theoryUnits": "Q = [Дж], L = [Дж/кг], m = [кг]", "formulaBuilder": { "question": "Формула парообразования:", "correctAnswer": "Q=L×m", "correctBlocks": ["Q", "L", "m"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"] } },
-    "humidity": { "title": "5. Влажность", "theoryDefinition": "Абс. влажность.", "theoryFormula": "ρ = m / V", "theoryUnits": "ρ = [г/м³], m = [г], V = [м³]", "formulaBuilder": { "question": "Формула влажности:", "correctAnswer": "ρ=m/V", "correctBlocks": ["ρ", "m", "V"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["F", "t", "s", "g", "P", "A", "N", "Q", "v"] } },
-    "equilibrium": { "title": "6. Термодинамическое равновесие", "theoryDefinition": "Тепловой баланс.", "theoryFormula": "Qотд = Qпол", "theoryUnits": "Q = [Дж]", "formulaBuilder": { "question": "Уравнение баланса:", "correctAnswer": "Qотд=Qпол", "correctBlocks": ["Qотд", "Qпол"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"] } },
-    "chargeConservation": { "title": "7. Закон сохранения заряда", "theoryDefinition": "Сумма зарядов.", "theoryFormula": "q1 + q2 = q1' + q2'", "theoryUnits": "q = [Кл]", "formulaBuilder": { "question": "Сохранение заряда:", "correctAnswer": "q1+q2=q1'+q2'", "correctBlocks": ["q1", "q2", "q1'", "q2'"], "mathSigns": ["=", "+", "×", "/", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "I"] } },
-    "coulomb": { "title": "8. Закон Кулона", "theoryDefinition": "Взаимодействие зарядов.", "theoryFormula": "F = k × (q1 × q2) / r²", "theoryUnits": "F = [Н], q = [Кл], r = [м]", "formulaBuilder": { "question": "Закон Кулона:", "correctAnswer": "F=k×(q1×q2)/r²", "correctBlocks": ["F", "k", "q1", "q2", "r²"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "I", "U"] } },
-    "ohm": { "title": "9. Закон Ома", "theoryDefinition": "Ток, напряжение, сопротивление.", "theoryFormula": "I = U / R", "theoryUnits": "I = [А], U = [В], R = [Ом]", "formulaBuilder": { "question": "Закон Ома:", "correctAnswer": "I=U/R", "correctBlocks": ["I", "U", "R"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "Q"] } },
-    "resistance": { "title": "10. Сопротивление проводника", "theoryDefinition": "Зависимость от размеров.", "theoryFormula": "R = ρ × l / S", "theoryUnits": "R = [Ом], ρ = [Ом·мм²/м], l = [м], S = [мм²]", "formulaBuilder": { "question": "Формула R:", "correctAnswer": "R=ρ×l/S", "correctBlocks": ["R", "ρ", "l", "S"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "I", "U"] } },
-    "powerElectric": { "title": "11. Мощность тока", "theoryDefinition": "Работа тока.", "theoryFormula": "P = U × I", "theoryUnits": "P = [Вт], U = [В], I = [А]", "formulaBuilder": { "question": "Мощность тока:", "correctAnswer": "P=U×I", "correctBlocks": ["P", "U", "I"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "R", "Q"] } },
-    "jouleLenz": { "title": "12. Закон Джоуля-Ленца", "theoryDefinition": "Тепло из тока.", "theoryFormula": "Q = I² × R × t", "theoryUnits": "Q = [Дж], I = [А], R = [Ом], t = [с]", "formulaBuilder": { "question": "Закон Джоуля-Ленца:", "correctAnswer": "Q=I²×R×t", "correctBlocks": ["Q", "I²", "R", "t"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "U"] } },
-    "circuits": { "title": "13. Соединение проводников", "theoryDefinition": "Последовательное и параллельное.", "theoryFormula": "R = R1 + R2", "theoryUnits": "R = [Ом], I = [А], U = [В]", "formulaBuilder": { "question": "Последовательное R:", "correctAnswer": "R=R1+R2", "correctBlocks": ["R", "R1", "R2"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "U", "I"] } },
-    "magneticField": { "title": "14. Сила Ампера", "theoryDefinition": "Действие поля на ток.", "theoryFormula": "F = B × I × l", "theoryUnits": "F = [Н], B = [Тл], I = [А], l = [м]", "formulaBuilder": { "question": "Сила Ампера:", "correctAnswer": "F=B×I×l", "correctBlocks": ["F", "B", "I", "l"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "U", "R"] } },
-    "lorentz": { "title": "15. Сила Лоренца", "theoryDefinition": "Действие поля на заряд.", "theoryFormula": "F = q × v × B", "theoryUnits": "F = [Н], q = [Кл], v = [м/с], B = [Тл]", "formulaBuilder": { "question": "Сила Лоренца:", "correctAnswer": "F=q×v×B", "correctBlocks": ["F", "q", "v", "B"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["s", "t", "m", "V", "g", "P", "U", "R", "I"] } },
-    "faraday": { "title": "16. Закон Фарадея", "theoryDefinition": "Электромагнитная индукция.", "theoryFormula": "ε = ΔΦ / Δt", "theoryUnits": "ε = [В], Φ = [Вб], t = [с]", "formulaBuilder": { "question": "Закон Фарадея:", "correctAnswer": "ε=ΔΦ/Δt", "correctBlocks": ["ε", "ΔΦ", "Δt"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "I"] } },
-    "optics": { "title": "17. Оптика", "theoryDefinition": "Закон преломления.", "theoryFormula": "n = sinα / sinβ", "theoryUnits": "n = [безразм.], α = [°], β = [°]", "formulaBuilder": { "question": "Показатель преломления:", "correctAnswer": "n=sinα/sinβ", "correctBlocks": ["n", "sinα", "sinβ"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "I", "R"] } }
+    "heat": {
+      "title": "1. Количество теплоты",
+      "theoryDefinition": "Нагревание.",
+      "theoryFormula": "Q = c × m × Δt",
+      "theoryUnits": "Q — количество теплоты, измеряется в [Дж]<br>c — удельная теплоемкость, измеряется в [Дж/(кг·°C)]<br>m — масса, измеряется в [кг]<br>Δt — изменение температуры, измеряется в [°C]",
+      "formulaBuilder": {
+        "question": "Формула Q:",
+        "correctAnswer": "Q=c×m×Δt",
+        "correctBlocks": ["Q", "c", "m", "Δt"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"]
+      }
+    },
+    "combustion": {
+      "title": "2. Горение топлива",
+      "theoryDefinition": "Сгорание.",
+      "theoryFormula": "Q = q × m",
+      "theoryUnits": "Q — количество теплоты, измеряется в [Дж]<br>q — удельная теплота сгорания, измеряется в [Дж/кг]<br>m — масса, измеряется в [кг]",
+      "formulaBuilder": {
+        "question": "Формула сгорания:",
+        "correctAnswer": "Q=q×m",
+        "correctBlocks": ["Q", "q", "m"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"]
+      }
+    },
+    "melting": {
+      "title": "3. Плавление",
+      "theoryDefinition": "Плавление.",
+      "theoryFormula": "Q = λ × m",
+      "theoryUnits": "Q — количество теплоты, измеряется в [Дж]<br>λ — удельная теплота плавления, измеряется в [Дж/кг]<br>m — масса, измеряется в [кг]",
+      "formulaBuilder": {
+        "question": "Формула плавления:",
+        "correctAnswer": "Q=λ×m",
+        "correctBlocks": ["Q", "λ", "m"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"]
+      }
+    },
+    "boiling": {
+      "title": "4. Кипение",
+      "theoryDefinition": "Парообразование.",
+      "theoryFormula": "Q = L × m",
+      "theoryUnits": "Q — количество теплоты, измеряется в [Дж]<br>L — удельная теплота парообразования, измеряется в [Дж/кг]<br>m — масса, измеряется в [кг]",
+      "formulaBuilder": {
+        "question": "Формула парообразования:",
+        "correctAnswer": "Q=L×m",
+        "correctBlocks": ["Q", "L", "m"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"]
+      }
+    },
+    "humidity": {
+      "title": "5. Влажность",
+      "theoryDefinition": "Абс. влажность.",
+      "theoryFormula": "ρ = m / V",
+      "theoryUnits": "ρ — абсолютная влажность, измеряется в [г/м³]<br>m — масса водяного пара, измеряется в [г]<br>V — объем воздуха, измеряется в [м³]",
+      "formulaBuilder": {
+        "question": "Формула влажности:",
+        "correctAnswer": "ρ=m/V",
+        "correctBlocks": ["ρ", "m", "V"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["F", "t", "s", "g", "P", "A", "N", "Q", "v"]
+      }
+    },
+    "equilibrium": {
+      "title": "6. Термодинамическое равновесие",
+      "theoryDefinition": "Тепловой баланс.",
+      "theoryFormula": "Qотд = Qпол",
+      "theoryUnits": "Qотд — количество теплоты, отданное горячим телом, измеряется в [Дж]<br>Qпол — количество теплоты, полученное холодным телом, измеряется в [Дж]",
+      "formulaBuilder": {
+        "question": "Уравнение баланса:",
+        "correctAnswer": "Qотд=Qпол",
+        "correctBlocks": ["Qотд", "Qпол"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "F", "g", "P", "N", "I"]
+      }
+    },
+    "chargeConservation": {
+      "title": "7. Закон сохранения заряда",
+      "theoryDefinition": "Сумма зарядов.",
+      "theoryFormula": "q1 + q2 = q1' + q2'",
+      "theoryUnits": "q — электрический заряд, измеряется в [Кл]",
+      "formulaBuilder": {
+        "question": "Сохранение заряда:",
+        "correctAnswer": "q1+q2=q1'+q2'",
+        "correctBlocks": ["q1", "q2", "q1'", "q2'"],
+        "mathSigns": ["=", "+", "×", "/", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "I"]
+      }
+    },
+    "coulomb": {
+      "title": "8. Закон Кулона",
+      "theoryDefinition": "Взаимодействие зарядов.",
+      "theoryFormula": "F = k × (q1 × q2) / r²",
+      "theoryUnits": "F — сила Кулона, измеряется в [Н]<br>q1, q2 — заряды, измеряются в [Кл]<br>r — расстояние между зарядами, измеряется в [м]",
+      "formulaBuilder": {
+        "question": "Закон Кулона:",
+        "correctAnswer": "F=k×(q1×q2)/r²",
+        "correctBlocks": ["F", "k", "q1", "q2", "r²"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "I", "U"]
+      }
+    },
+    "ohm": {
+      "title": "9. Закон Ома",
+      "theoryDefinition": "Ток, напряжение, сопротивление.",
+      "theoryFormula": "I = U / R",
+      "theoryUnits": "I — сила тока, измеряется в [А]<br>U — напряжение, измеряется в [В]<br>R — сопротивление, измеряется в [Ом]",
+      "formulaBuilder": {
+        "question": "Закон Ома:",
+        "correctAnswer": "I=U/R",
+        "correctBlocks": ["I", "U", "R"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "Q"]
+      }
+    },
+    "resistance": {
+      "title": "10. Сопротивление проводника",
+      "theoryDefinition": "Зависимость от размеров.",
+      "theoryFormula": "R = ρ × l / S",
+      "theoryUnits": "R — сопротивление, измеряется в [Ом]<br>ρ — удельное сопротивление, измеряется в [Ом·мм²/м]<br>l — длина проводника, измеряется в [м]<br>S — площадь поперечного сечения, измеряется в [мм²]",
+      "formulaBuilder": {
+        "question": "Формула R:",
+        "correctAnswer": "R=ρ×l/S",
+        "correctBlocks": ["R", "ρ", "l", "S"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "I", "U"]
+      }
+    },
+    "powerElectric": {
+      "title": "11. Мощность тока",
+      "theoryDefinition": "Работа тока.",
+      "theoryFormula": "P = U × I",
+      "theoryUnits": "P — мощность, измеряется в [Вт]<br>U — напряжение, измеряется в [В]<br>I — сила тока, измеряется в [А]",
+      "formulaBuilder": {
+        "question": "Мощность тока:",
+        "correctAnswer": "P=U×I",
+        "correctBlocks": ["P", "U", "I"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "R", "Q"]
+      }
+    },
+    "jouleLenz": {
+      "title": "12. Закон Джоуля-Ленца",
+      "theoryDefinition": "Тепло из тока.",
+      "theoryFormula": "Q = I² × R × t",
+      "theoryUnits": "Q — количество теплоты, измеряется в [Дж]<br>I — сила тока, измеряется в [А]<br>R — сопротивление, измеряется в [Ом]<br>t — время, измеряется в [с]",
+      "formulaBuilder": {
+        "question": "Закон Джоуля-Ленца:",
+        "correctAnswer": "Q=I²×R×t",
+        "correctBlocks": ["Q", "I²", "R", "t"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "U"]
+      }
+    },
+    "circuits": {
+      "title": "13. Соединение проводников",
+      "theoryDefinition": "Последовательное и параллельное.",
+      "theoryFormula": "R = R1 + R2",
+      "theoryUnits": "R — общее сопротивление, измеряется в [Ом]<br>R1, R2 — сопротивления отдельных проводников, измеряются в [Ом]",
+      "formulaBuilder": {
+        "question": "Последовательное R:",
+        "correctAnswer": "R=R1+R2",
+        "correctBlocks": ["R", "R1", "R2"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "U", "I"]
+      }
+    },
+    "magneticField": {
+      "title": "14. Сила Ампера",
+      "theoryDefinition": "Действие поля на ток.",
+      "theoryFormula": "F = B × I × l",
+      "theoryUnits": "F — сила Ампера, измеряется в [Н]<br>B — магнитная индукция, измеряется в [Тл]<br>I — сила тока, измеряется в [А]<br>l — длина проводника, измеряется в [м]",
+      "formulaBuilder": {
+        "question": "Сила Ампера:",
+        "correctAnswer": "F=B×I×l",
+        "correctBlocks": ["F", "B", "I", "l"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "g", "P", "U", "R"]
+      }
+    },
+    "lorentz": {
+      "title": "15. Сила Лоренца",
+      "theoryDefinition": "Действие поля на заряд.",
+      "theoryFormula": "F = q × v × B",
+      "theoryUnits": "F — сила Лоренца, измеряется в [Н]<br>q — заряд частицы, измеряется в [Кл]<br>v — скорость частицы, измеряется в [м/с]<br>B — магнитная индукция, измеряется в [Тл]",
+      "formulaBuilder": {
+        "question": "Сила Лоренца:",
+        "correctAnswer": "F=q×v×B",
+        "correctBlocks": ["F", "q", "v", "B"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["s", "t", "m", "V", "g", "P", "U", "R", "I"]
+      }
+    },
+    "faraday": {
+      "title": "16. Закон Фарадея",
+      "theoryDefinition": "Электромагнитная индукция.",
+      "theoryFormula": "ε = ΔΦ / Δt",
+      "theoryUnits": "ε — ЭДС индукции, измеряется в [В]<br>ΔΦ — изменение магнитного потока, измеряется в [Вб]<br>Δt — время изменения, измеряется в [с]",
+      "formulaBuilder": {
+        "question": "Закон Фарадея:",
+        "correctAnswer": "ε=ΔΦ/Δt",
+        "correctBlocks": ["ε", "ΔΦ", "Δt"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "P", "I"]
+      }
+    },
+    "optics": {
+      "title": "17. Оптика",
+      "theoryDefinition": "Закон преломления.",
+      "theoryFormula": "n = sinα / sinβ",
+      "theoryUnits": "n — показатель преломления, безразмерная величина<br>α — угол падения, измеряется в [°]<br>β — угол преломления, измеряется в [°]",
+      "formulaBuilder": {
+        "question": "Показатель преломления:",
+        "correctAnswer": "n=sinα/sinβ",
+        "correctBlocks": ["n", "sinα", "sinβ"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["v", "s", "t", "m", "V", "F", "g", "I", "R"]
+      }
+    }
   },
   "9": {
-    "acceleration": { "title": "1. Равноускоренное движение", "theoryDefinition": "Путь без начальной скорости.", "theoryFormula": "s = (a × t²) / 2", "theoryUnits": "s = [м], a = [м/с²], t = [с]", "formulaBuilder": { "question": "Формула пути:", "correctAnswer": "s=(a×t²)/2", "correctBlocks": ["s", "a", "t²", "2"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "m", "V", "F", "g", "P", "I", "U", "R"] } },
-    "newton2": { "title": "2. Второй закон Ньютона", "theoryDefinition": "Сила и ускорение.", "theoryFormula": "F = m × a", "theoryUnits": "F = [Н], m = [кг], a = [м/с²]", "formulaBuilder": { "question": "Второй закон Ньютона:", "correctAnswer": "F=m×a", "correctBlocks": ["F", "m", "a"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["v", "s", "t", "V", "g", "P", "I", "U", "R"] } },
-    "momentum": { "title": "3. Импульс тела", "theoryDefinition": "Масса на скорость.", "theoryFormula": "p = m × v", "theoryUnits": "p = [кг·м/с], m = [кг], v = [м/с]", "formulaBuilder": { "question": "Формула импульса:", "correctAnswer": "p=m×v", "correctBlocks": ["p", "m", "v"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["F", "s", "t", "V", "g", "A", "N", "Q", "ρ"] } },
-    "freeFall": { "title": "4. Свободное падение", "theoryDefinition": "Скорость падения.", "theoryFormula": "v = g × t", "theoryUnits": "v = [м/с], g = [м/с²], t = [с]", "formulaBuilder": { "question": "Скорость при падении:", "correctAnswer": "v=g×t", "correctBlocks": ["v", "g", "t"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["F", "s", "m", "V", "A", "N", "Q", "ρ", "I"] } }
+    "acceleration": {
+      "title": "1. Равноускоренное движение",
+      "theoryDefinition": "Путь без начальной скорости.",
+      "theoryFormula": "s = (a × t²) / 2",
+      "theoryUnits": "s — путь, измеряется в [м]<br>a — ускорение, измеряется в [м/с²]<br>t — время, измеряется в [с]",
+      "formulaBuilder": {
+        "question": "Формула пути:",
+        "correctAnswer": "s=(a×t²)/2",
+        "correctBlocks": ["s", "a", "t²", "2"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "m", "V", "F", "g", "P", "I", "U", "R"]
+      }
+    },
+    "newton2": {
+      "title": "2. Второй закон Ньютона",
+      "theoryDefinition": "Сила и ускорение.",
+      "theoryFormula": "F = m × a",
+      "theoryUnits": "F — сила, измеряется в [Н]<br>m — масса, измеряется в [кг]<br>a — ускорение, измеряется в [м/с²]",
+      "formulaBuilder": {
+        "question": "Второй закон Ньютона:",
+        "correctAnswer": "F=m×a",
+        "correctBlocks": ["F", "m", "a"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["v", "s", "t", "V", "g", "P", "I", "U", "R"]
+      }
+    },
+    "momentum": {
+      "title": "3. Импульс тела",
+      "theoryDefinition": "Масса на скорость.",
+      "theoryFormula": "p = m × v",
+      "theoryUnits": "p — импульс тела, измеряется в [кг·м/с]<br>m — масса, измеряется в [кг]<br>v — скорость, измеряется в [м/с]",
+      "formulaBuilder": {
+        "question": "Формула импульса:",
+        "correctAnswer": "p=m×v",
+        "correctBlocks": ["p", "m", "v"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["F", "s", "t", "V", "g", "A", "N", "Q", "ρ"]
+      }
+    },
+    "freeFall": {
+      "title": "4. Свободное падение",
+      "theoryDefinition": "Скорость падения.",
+      "theoryFormula": "v = g × t",
+      "theoryUnits": "v — скорость, измеряется в [м/с]<br>g — ускорение свободного падения, измеряется в [м/с²]<br>t — время, измеряется в [с]",
+      "formulaBuilder": {
+        "question": "Скорость при падении:",
+        "correctAnswer": "v=g×t",
+        "correctBlocks": ["v", "g", "t"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["F", "s", "m", "V", "A", "N", "Q", "ρ", "I"]
+      }
+    }
   },
   "10": {
-    "idealGas": { "title": "1. Уравнение Менделеева-Клапейрона", "theoryDefinition": "Состояние газа.", "theoryFormula": "p × V = ν × R × T", "theoryUnits": "p = [Па], V = [м³], ν = [моль], T = [К]", "formulaBuilder": { "question": "Уравнение газа:", "correctAnswer": "p×V=ν×R×T", "correctBlocks": ["p", "V", "ν", "R", "T"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["F", "m", "g", "I", "U", "q", "t"] } },
-    "coulomb10": { "title": "2. Закон Кулона", "theoryDefinition": "Взаимодействие зарядов.", "theoryFormula": "F = k × q1 × q2 / r²", "theoryUnits": "F = [Н], q = [Кл], r = [м]", "formulaBuilder": { "question": "Закон Кулона:", "correctAnswer": "F=k×q1×q2/r²", "correctBlocks": ["F", "k", "q1", "q2", "r²"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["p", "V", "ν", "R", "T", "m", "g"] } },
-    "kineticEnergy": { "title": "3. Кинетическая энергия", "theoryDefinition": "Энергия движения.", "theoryFormula": "Eк = m × v² / 2", "theoryUnits": "Eк = [Дж], m = [кг], v = [м/с]", "formulaBuilder": { "question": "Eк:", "correctAnswer": "Eк=m×v²/2", "correctBlocks": ["Eк", "m", "v²", "2"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["p", "V", "ν", "R", "T", "g", "F"] } }
+    "idealGas": {
+      "title": "1. Уравнение Менделеева-Клапейрона",
+      "theoryDefinition": "Состояние газа.",
+      "theoryFormula": "p × V = ν × R × T",
+      "theoryUnits": "p — давление, измеряется в [Па]<br>V — объем, измеряется в [м³]<br>ν — количество вещества, измеряется в [моль]<br>R — универсальная газовая постоянная<br>T — температура, измеряется в [К]",
+      "formulaBuilder": {
+        "question": "Уравнение газа:",
+        "correctAnswer": "p×V=ν×R×T",
+        "correctBlocks": ["p", "V", "ν", "R", "T"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["F", "m", "g", "I", "U", "q", "t"]
+      }
+    },
+    "coulomb10": {
+      "title": "2. Закон Кулона",
+      "theoryDefinition": "Взаимодействие зарядов.",
+      "theoryFormula": "F = k × q1 × q2 / r²",
+      "theoryUnits": "F — сила Кулона, измеряется в [Н]<br>q1, q2 — заряды, измеряются в [Кл]<br>r — расстояние, измеряется в [м]",
+      "formulaBuilder": {
+        "question": "Закон Кулона:",
+        "correctAnswer": "F=k×q1×q2/r²",
+        "correctBlocks": ["F", "k", "q1", "q2", "r²"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["p", "V", "ν", "R", "T", "m", "g"]
+      }
+    },
+    "kineticEnergy": {
+      "title": "3. Кинетическая энергия",
+      "theoryDefinition": "Энергия движения.",
+      "theoryFormula": "Eк = m × v² / 2",
+      "theoryUnits": "Eк — кинетическая энергия, измеряется в [Дж]<br>m — масса, измеряется в [кг]<br>v — скорость, измеряется в [м/с]",
+      "formulaBuilder": {
+        "question": "Eк:",
+        "correctAnswer": "Eк=m×v²/2",
+        "correctBlocks": ["Eк", "m", "v²", "2"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["p", "V", "ν", "R", "T", "g", "F"]
+      }
+    }
   },
   "11": {
-    "faraday11": { "title": "1. Закон электромагнитной индукции", "theoryDefinition": "ЭДС индукции.", "theoryFormula": "ε = ΔΦ / Δt", "theoryUnits": "ε = [В], ΔΦ = [Вб], Δt = [с]", "formulaBuilder": { "question": "Закон Фарадея:", "correctAnswer": "ε=ΔΦ/Δt", "correctBlocks": ["ε", "ΔΦ", "Δt"], "mathSigns": ["=", "/", "×", "+", "-"], "extraLetters": ["E", "m", "c", "h", "ν", "p", "V"] } },
-    "einstein": { "title": "2. Фотоэффект", "theoryDefinition": "Уравнение Эйнштейна.", "theoryFormula": "hν = Aвых + Eк", "theoryUnits": "h = [Дж·с], ν = [Гц], A = [Дж], E = [Дж]", "formulaBuilder": { "question": "Уравнение фотоэффекта:", "correctAnswer": "hν=Aвых+Eк", "correctBlocks": ["hν", "Aвых", "Eк"], "mathSigns": ["=", "+", "×", "/", "-"], "extraLetters": ["ε", "ΔΦ", "Δt", "m", "c", "p", "V"] } },
-    "massEnergy": { "title": "3. Связь массы и энергии", "theoryDefinition": "Энергия покоя.", "theoryFormula": "E = m × c²", "theoryUnits": "E = [Дж], m = [кг], c = [м/с]", "formulaBuilder": { "question": "Связь массы и энергии:", "correctAnswer": "E=m×c²", "correctBlocks": ["E", "m", "c²"], "mathSigns": ["=", "×", "/", "+", "-"], "extraLetters": ["ε", "ΔΦ", "Δt", "hν", "Aвых", "Eк", "p"] } }
+    "faraday11": {
+      "title": "1. Закон электромагнитной индукции",
+      "theoryDefinition": "ЭДС индукции.",
+      "theoryFormula": "ε = ΔΦ / Δt",
+      "theoryUnits": "ε — ЭДС индукции, измеряется в [В]<br>ΔΦ — изменение магнитного потока, измеряется в [Вб]<br>Δt — время, измеряется в [с]",
+      "formulaBuilder": {
+        "question": "Закон Фарадея:",
+        "correctAnswer": "ε=ΔΦ/Δt",
+        "correctBlocks": ["ε", "ΔΦ", "Δt"],
+        "mathSigns": ["=", "/", "×", "+", "-"],
+        "extraLetters": ["E", "m", "c", "h", "ν", "p", "V"]
+      }
+    },
+    "einstein": {
+      "title": "2. Фотоэффект",
+      "theoryDefinition": "Уравнение Эйнштейна.",
+      "theoryFormula": "hν = Aвых + Eк",
+      "theoryUnits": "h — постоянная Планка<br>ν — частота света, измеряется в [Гц]<br>Aвых — работа выхода, измеряется в [Дж]<br>Eк — кинетическая энергия электрона, измеряется в [Дж]",
+      "formulaBuilder": {
+        "question": "Уравнение фотоэффекта:",
+        "correctAnswer": "hν=Aвых+Eк",
+        "correctBlocks": ["hν", "Aвых", "Eк"],
+        "mathSigns": ["=", "+", "×", "/", "-"],
+        "extraLetters": ["ε", "ΔΦ", "Δt", "m", "c", "p", "V"]
+      }
+    },
+    "massEnergy": {
+      "title": "3. Связь массы и энергии",
+      "theoryDefinition": "Энергия покоя.",
+      "theoryFormula": "E = m × c²",
+      "theoryUnits": "E — энергия, измеряется в [Дж]<br>m — масса, измеряется в [кг]<br>c — скорость света в вакууме, измеряется в [м/с]",
+      "formulaBuilder": {
+        "question": "Связь массы и энергии:",
+        "correctAnswer": "E=m×c²",
+        "correctBlocks": ["E", "m", "c²"],
+        "mathSigns": ["=", "×", "/", "+", "-"],
+        "extraLetters": ["ε", "ΔΦ", "Δt", "hν", "Aвых", "Eк", "p"]
+      }
+    }
   }
 }
